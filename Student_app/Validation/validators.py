@@ -1,4 +1,5 @@
 import re
+from datetime import datetime
 
 COURSES = ["Mathematics", "Physics", "Chemistry", "Biology", "Computer Science", "English"]
 
@@ -24,6 +25,18 @@ def validate_age(age):
     if age < 5 or age > 120:
         raise ValueError("Age must be between 5 and 120.")
     return age
+
+def validate_dob(dob_str):
+    """
+    Expected format: YYYY-MM-DD
+    """
+    try:
+        dob = datetime.strptime(dob_str, "%Y-%m-%d").date()
+        if dob >= datetime.today().date():
+            raise ValueError("Date of Birth must be in the past")
+        return dob_str
+    except ValueError:
+        raise ValueError("Invalid DOB format. Use YYYY-MM-DD")
 
 def validate_email(email):
     pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
@@ -59,6 +72,7 @@ def register_student():
         middle_name = validate_middle_name(input("Enter Middle Name (optional): "))
         last_name = validate_name(input("Enter Last Name: "), "Last Name")
         age = validate_age(input("Enter Age: "))
+        dob = validate_dob(input("Enter Date of Birth (YYYY-MM-DD): "))
         email = validate_email(input("Enter Email: "))
         phone = validate_phone(input("Enter Phone (10 digits): "))
         gender = validate_gender(input("Enter Gender (Male/Female/Other): "))
@@ -66,8 +80,10 @@ def register_student():
 
         student = {
             "First Name": first_name,
+            "Middle Name": middle_name,
             "Last Name": last_name,
             "Age": age,
+            "DOB": dob,
             "Email": email,
             "Phone": phone,
             "Gender": gender,

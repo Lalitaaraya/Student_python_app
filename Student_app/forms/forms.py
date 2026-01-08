@@ -1,5 +1,5 @@
 from Validation.validators import (
-    validate_name, validate_age, validate_email, validate_middle_name,
+    validate_name, validate_age, validate_dob, validate_email, validate_middle_name,
     validate_phone, validate_gender, validate_course, COURSES
 )
 from models.student import Student
@@ -12,6 +12,7 @@ def student_form():
             middle_name = validate_middle_name(input("Enter Middle Name (optional): "), field_name="Middle Name", required=False)
             last_name = validate_name(input("Enter Last Name: "), field_name="Last Name")
             age = validate_age(input("Enter Age: "))
+            dob = validate_dob(input("Enter Date of birth: "))
             email = validate_email(input("Enter Email: "))
             phone = validate_phone(input("Enter Phone Number: "))
             gender = validate_gender(input("Enter Gender (Male/Female/Other): "))

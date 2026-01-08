@@ -62,7 +62,11 @@ Install dependencies:
 pip install -r requirements.txt
 Run the app:
 
+<<<<<<< HEAD:Readme.md
 ##NOTE- Change the Direcory before running main.py file
+=======
+NOTE- Change directory before running
+>>>>>>> ca8e46f (Update README.md):README.md
 cd Student_app
 python main.py
 Follow the prompts to register a student.
