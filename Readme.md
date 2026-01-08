@@ -55,19 +55,15 @@ STUDENT_APP/
 2. Ensure you have Python 3.8+ installed.
 3. (Optional) Create and activate a virtual environment:
 
-```bash
 python -m venv venv
 source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate      # Windows
 Install dependencies:
-
-bash
-Copy code
 pip install -r requirements.txt
 Run the app:
 
-bash
-Copy code
+NOTE- Change the Direcory before running main.py file
+cd Student_app
 python main.py
 Follow the prompts to register a student.
 
