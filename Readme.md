@@ -63,8 +63,8 @@ pip install -r requirements.txt
 Run the app:
 
 ##NOTE- Change the Direcory before running main.py file
-#cd Student_app
-#python main.py
+cd Student_app
+python main.py
 Follow the prompts to register a student.
 
 Notes
