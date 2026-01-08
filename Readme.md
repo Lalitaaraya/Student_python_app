@@ -55,21 +55,20 @@ STUDENT_APP/
 2. Ensure you have Python 3.8+ installed.
 3. (Optional) Create and activate a virtual environment:
 
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
-Install dependencies:
-pip install -r requirements.txt
-Run the app:
+    python -m venv venv
+    source venv/bin/activate   # Linux/Mac
+    venv\Scripts\activate      # Windows
 
-##NOTE- Change the Direcory before running main.py file
-cd Student_app
-python main.py
+4. Install dependencies:
+
+    pip install -r requirements.txt
+
+5. Run the app:
+
+NOTE: Change directory before running
+
+    cd Student_app
+    python main.py
+
 Follow the prompts to register a student.
 
-Notes
-CSV file (students.csv) is automatically created in the storage folder if it doesn’t exist.
-
-Only valid course names can be selected.
-
-Middle Name is optional.
