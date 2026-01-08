@@ -54,8 +54,29 @@ STUDENT_APP/
 ├── Readme.md # Project documentation
 └── requirements.txt # Python dependencies
 
-yaml
-Copy code
+The project is organized into several folders and files for modularity and clarity:
+
+storage/ – Contains students.csv, the file where all student data is stored persistently.
+
+Student_app/ – Main application folder:
+
+forms/ – Contains forms.py, which defines input forms for student data.
+
+models/ – Contains student.py defining the Student data model and __init__.py.
+
+validation/ – Contains validators.py for input validation and __init__.py.
+
+main.py – Entry point of the application, providing the menu interface.
+
+utils.py – Utility functions like reading/writing CSV files or helper functions.
+
+.vscode/ – VSCode workspace settings (optional).
+
+Readme.md – Project documentation.
+
+requirements.txt – Python dependencies for the project.
+
+This structure ensures separation of concerns: models handle data, forms handle input, validation ensures correctness, and utilities manage file operations.
 
 ---
 
@@ -85,17 +106,6 @@ bash
 Copy code
 cd Student_app
 python main.py
-The application will provide a menu to:
-
-Add a student
-
-View all students
-
-Update a student
-
-Delete a student
-
-Exit
 
 Notes
 Ensure students.csv exists in the storage/ folder before running the app.
