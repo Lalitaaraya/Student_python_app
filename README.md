@@ -45,9 +45,8 @@ STUDENT_APP/
 │   ├── main.py
 │   └── utils.py
 ├── .vscode/
-├── Readme.md
+├── README.md
 └── requirements.txt
-
 
 ## How to Run
 
@@ -55,13 +54,15 @@ STUDENT_APP/
 2. Ensure you have Python 3.8+ installed.
 3. (Optional) Create and activate a virtual environment:
 
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
-Install dependencies:
-pip install -r requirements.txt
-Run the app:
+    ```bash
+    python -m venv venv
+    # Linux/Mac
+    source venv/bin/activate
+    # Windows
+    venv\Scripts\activate
+    ```
 
+<<<<<<< HEAD:README.md
 <<<<<<< HEAD:Readme.md
 ##NOTE- Change the Direcory before running main.py file
 =======
@@ -70,10 +71,26 @@ NOTE- Change directory before running
 cd Student_app
 python main.py
 Follow the prompts to register a student.
+=======
+4. Install dependencies:
+>>>>>>> 934dcf92b9fb86fc2643a113445cd1cc493da59a:Readme.md
 
-Notes
-CSV file (students.csv) is automatically created in the storage folder if it doesn’t exist.
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-Only valid course names can be selected.
+5. Run the app:
 
-Middle Name is optional.
+    ```bash
+    # Change directory before running
+    cd Student_app
+    python main.py
+    ```
+
+6. Follow the prompts to register a student.
+
+## Notes
+
+- CSV file (`students.csv`) is automatically created in the `storage` folder if it doesn’t exist.
+- Only valid course names can be selected.
+- Middle Name is optional.
