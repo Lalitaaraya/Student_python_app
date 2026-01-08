@@ -1,73 +1,58 @@
-# Student Registration Console App
+# Student Python App
 
-A simple console-based Python app to register students with strict validation and CSV storage.
-
-## Features
-
-- Collects the following information:
-  - First Name (required)
-  - Middle Name (optional)
-  - Last Name (required)
-  - Age (required, 5-120)
-  - Email (required, valid format)
-  - Phone (required, 10 digits)
-  - Gender (required, Male/Female/Other)
-  - Course Name (required, choose from predefined courses)
-- Strict validation for all required fields.
-- Optional Middle Name field.
-- Saves student data to a CSV file (`students.csv`).
-- Displays total registered students.
-
-## Predefined Courses
-
-- Mathematics
-- Physics
-- Chemistry
-- Biology
-- Computer Science
-- English
+A Python project for managing student data with a modular structure including forms, models, and validation.
 
 ## Project Structure
 
-Student_app/
-├── forms.py
-├── utils.py
-├── models/
-│ └── student.py
-├── Validation/
-│ └── validators.py
+STUDENT_APP/
 ├── storage/
 │ └── students.csv
-└── main.py
+├── Student_app/
+│ ├── pycache/
+│ ├── forms/
+│ ├── models/
+│ ├── Validation/
+│ ├── init.py
+│ ├── main.py
+│ └── utils.py
+├── .vscode/
+├── Readme.md
+└── requirements.txt
 
-python
+yaml
 Copy code
 
-## How to Run
+- **storage/**: Contains CSV files for student data.
+- **Student_app/**: Core application code.
+  - **forms/**: Input forms for student data.
+  - **models/**: Data models for the application.
+  - **Validation/**: Validation logic for inputs.
+  - **main.py**: Entry point of the application.
+  - **utils.py**: Helper functions.
+- **requirements.txt**: Python dependencies.
+- **Readme.md**: Project documentation.
 
-1. Clone the repository or download the project.
-2. Ensure you have Python 3.8+ installed.
-3. (Optional) Create and activate a virtual environment:
+## Setup and Running
+
+1. **Clone the repository:**
 
 ```bash
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
+git clone https://github.com/Lalitaaraya/Student_python_app.git
+cd Student_python_app
 Install dependencies:
 
 bash
 Copy code
 pip install -r requirements.txt
-Run the app:
+Run the application:
 
 bash
 Copy code
+cd Student_app
 python main.py
-Follow the prompts to register a student.
-
 Notes
-CSV file (students.csv) is automatically created in the storage folder if it doesn’t exist.
+Ensure Python 3.8+ is installed.
 
-Only valid course names can be selected.
+The application reads and writes student data from storage/students.csv.
 
-Middle Name is optional.
+Modify or add forms, models, or validation rules as needed.
