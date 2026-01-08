@@ -1,0 +1,73 @@
+# Student Registration Console App
+
+A simple console-based Python app to register students with strict validation and CSV storage.
+
+## Features
+
+- Collects the following information:
+  - First Name (required)
+  - Middle Name (optional)
+  - Last Name (required)
+  - Age (required, 5-120)
+  - Email (required, valid format)
+  - Phone (required, 10 digits)
+  - Gender (required, Male/Female/Other)
+  - Course Name (required, choose from predefined courses)
+- Strict validation for all required fields.
+- Optional Middle Name field.
+- Saves student data to a CSV file (`students.csv`).
+- Displays total registered students.
+
+## Predefined Courses
+
+- Mathematics
+- Physics
+- Chemistry
+- Biology
+- Computer Science
+- English
+
+## Project Structure
+
+Student_app/
+├── forms.py
+├── utils.py
+├── models/
+│ └── student.py
+├── Validation/
+│ └── validators.py
+├── storage/
+│ └── students.csv
+└── main.py
+
+python
+Copy code
+
+## How to Run
+
+1. Clone the repository or download the project.
+2. Ensure you have Python 3.8+ installed.
+3. (Optional) Create and activate a virtual environment:
+
+```bash
+python -m venv venv
+source venv/bin/activate   # Linux/Mac
+venv\Scripts\activate      # Windows
+Install dependencies:
+
+bash
+Copy code
+pip install -r requirements.txt
+Run the app:
+
+bash
+Copy code
+python main.py
+Follow the prompts to register a student.
+
+Notes
+CSV file (students.csv) is automatically created in the storage folder if it doesn’t exist.
+
+Only valid course names can be selected.
+
+Middle Name is optional.
